@@ -1,0 +1,5 @@
+
+{
+  "name": "Plant Disease Detector",
+  "description": "Upload an image of a plant to identify potential diseases and learn how to treat them, or confirm if your plant is healthy. Powered by Gemini API."
+}
