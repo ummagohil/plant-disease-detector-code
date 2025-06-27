@@ -1,15 +1,17 @@
-import React, { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { ImageUploader } from "./components/ImageUploader";
 import { AnalysisDisplay } from "./components/AnalysisDisplay";
 import { analyzePlantImage } from "./services/geminiService";
 import { fileToBase64 } from "./utils/imageUtils";
 import {
   LeafIcon,
+  UploadCloudIcon,
   SparklesIcon,
   AlertTriangleIcon,
+  XCircleIcon,
 } from "./components/IconComponents";
 
-const App: React.FC = () => {
+const App = () => {
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
   const [analysisResult, setAnalysisResult] = useState<string | null>(null);
