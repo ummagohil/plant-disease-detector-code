@@ -12,7 +12,7 @@ if (!getApiKey()) {
   );
 }
 
-const model = "gemini-2.5-flash-preview-04-17"; // Suitable for multimodal tasks
+const model = "gemini-1.5-flash"; // Updated to latest supported multimodal model
 
 const systemInstruction = `You are an expert plant pathologist and botanist. Analyze the provided image of a plant.
 1. **Overall Assessment:** Start with a general assessment (e.g., 'The plant appears healthy,' or 'The plant shows signs of distress.').
@@ -59,7 +59,7 @@ export const analyzePlantImage = async (
       },
     });
 
-    return response.text;
+    return response.text ?? "";
   } catch (error) {
     console.error("Error calling Gemini API:", error);
     if (error instanceof Error) {
